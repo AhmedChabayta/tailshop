@@ -1,0 +1,381 @@
+{
+  "categories": [
+    {
+      "category": "arts and crafts",
+      "subcategories": [
+        "painting and drawing art supplies",
+        "beading and jewelry making",
+        "crafting",
+        "fabric",
+        "fabric decorating",
+        "knitting and crochet",
+        "needlework",
+        "organization storage and transport",
+        "printmaking",
+        "scrapbooking and stamping",
+        "sewing",
+        "party decorations and supplies",
+        "gift wrapping supplies"
+      ]
+    },
+    {
+      "category": "automotive",
+      "subcategories": [
+        "car care",
+        "cars electronics and accessories",
+        "exterior accessories",
+        "interior accessories",
+        "lights and lightning accessories",
+        "motorcycle and powersports",
+        "oils and fluids",
+        "paint and paint supplies",
+        "performance parts and accessories",
+        "replacement parts",
+        "RV parts and accessories",
+        "tires and wheels",
+        "tools and equipment",
+        "automotive enthusiast merchandise",
+        "heavy dity and commercial vehicle equipment"
+      ]
+    },
+    {
+      "category": "baby",
+      "subcategories": [
+        "activity and entertainment",
+        "apparel and accessories",
+        "boys and toddlers toys",
+        "baby care",
+        "baby stationary",
+        "car seat and accessories",
+        "diapering",
+        "feeding",
+        "gifts",
+        "nursery",
+        "potty training",
+        "pregnancy and maternity",
+        "safety",
+        "strollers and accessories",
+        "travel gear"
+      ]
+    },
+    {
+      "category": "beauty & personal care",
+      "subcategories": [
+        "makeup",
+        "skin care",
+        "hair care",
+        "fragrance",
+        "foot,hand and nail care",
+        "tools and accessories",
+        "shave and hair removal",
+        "personal care ",
+        "oral care"
+      ]
+    },
+    {
+      "category": "boys fashion",
+      "subcategories": [
+        "clothing",
+        "shoes",
+        "jewelry",
+        "watches",
+        "accessories",
+        "school uniforms",
+        "womens fashion",
+        "mens fashion",
+        "girls fashion"
+      ]
+    },
+    {
+      "category": "computers",
+      "subcategories": [
+        "computer accessories and peripherals",
+        "computer components",
+        "computers and tablets",
+        "data storage",
+        "external components",
+        "laptop accessories",
+        "monitors",
+        "network products",
+        "power strips and surge protectors",
+        "printers",
+        "scanners",
+        "servers",
+        "tablet accessories",
+        "tablet replacement parts",
+        "warranties and services"
+      ]
+    },
+    {
+      "category": "electronics",
+      "subcategories": [
+        "accessories and supplies",
+        "camera and photo",
+        "car and vehicle electronics",
+        "cell phone and accessories",
+        "computers and accessories",
+        "gps and navigation",
+        "headphones",
+        "home audio",
+        "office electronics",
+        "portable audio and video",
+        "security and surveillance",
+        "service plans",
+        "telivions and video",
+        "video game consoles and accessories",
+        "video projectors",
+        "wearble technology",
+        "ebook readers and accessories"
+      ]
+    },
+    {
+      "category": "girls fashion",
+      "subcategories": [
+        "clothing",
+        "shoes",
+        "jewelry",
+        "watches",
+        "accessories",
+        "school uniforms",
+        "womens fashion",
+        "mens fashion",
+        "boys fashion"
+      ]
+    },
+    {
+      "category": "health and household",
+      "subcategories": [
+        "baby and child care",
+        "health care",
+        "household supplies",
+        "medical supplies and equipment",
+        "oral care",
+        "personal care",
+        "sexual wellness",
+        "sports nutrition",
+        "stationary and gift wrapping supplies",
+        "vision care",
+        "vitamins and dietary supplements",
+        "wellness and relaxation"
+      ]
+    },
+    {
+      "category": "home and kitchen",
+      "subcategories": [
+        "kids home store",
+        "kitchen and dining",
+        "bedding",
+        "bath",
+        "furniture",
+        "home decor",
+        "wall art",
+        "lightning and cieling fans",
+        "seasonal decor",
+        "event and party supplies",
+        "heating cool and air quality",
+        "irons and streamers",
+        "vaccums and floor care",
+        "storage and organization",
+        "cleaning supplies"
+      ]
+    },
+    {
+      "category": "industrial and scientific",
+      "subcategories": [
+        "abrasive ans finishing products",
+        "additive manufacturing products",
+        "commercial door products",
+        "cutting tools",
+        "fasteners",
+        "filtration",
+        "food service equiment and supplies",
+        "hydraulics pneumatics and plumbing",
+        "industrial electrical",
+        "industrial hardware",
+        "industrial power and hand tools",
+        "janitorial and sanitations supplies",
+        "lab and scientific products",
+        "material handling products",
+        "occupational health and safty products",
+        "packaging and shipping supplies",
+        "power transmission products",
+        "professional dental supplies",
+        "professional medican supllies",
+        "raw materials",
+        "retail store fixtures and equiment",
+        "robotics",
+        "science education",
+        "tapes, adhesives and sealants",
+        "test,measure and inspect"
+      ]
+    },
+    {
+      "category": "luggage",
+      "subcategories": [
+        "carry-ons",
+        "backpacks",
+        "garmnent bags",
+        "travel totes",
+        "luggage sets",
+        "laptop bags",
+        "suitcases",
+        "kids luggage",
+        "messenger bags",
+        "umbrellas",
+        "duffles",
+        "travel accessories"
+      ]
+    },
+    {
+      "category": "mens fashion",
+      "subcategories": [
+        "clothing",
+        "shoes",
+        "jewelry",
+        "watches",
+        "handbags",
+        "accessories",
+        "womens fashion",
+        "girls fashion",
+        "boys fashion"
+      ]
+    },
+    {
+      "category": "movies and tv",
+      "subcategories": [
+        "movies",
+        "tv shows",
+        "blu-ray",
+        "4k ultra hydraulics",
+        "best sellers",
+        "todals deals",
+        "new releases",
+        "pre-orders",
+        "kids and family",
+        "prime video"
+      ]
+    },
+    {
+      "category": "pet supplies",
+      "subcategories": [
+        "dogs",
+        "cats",
+        "fish and aquatic pets",
+        "birds",
+        "horses",
+        "reptiles and amphibians",
+        "small animals"
+      ]
+    },
+    {
+      "category": "software",
+      "subcategories": [
+        "accounting and finance",
+        "antivirus and security",
+        "business and office",
+        "childrens",
+        "design and illustration",
+        "digital software",
+        "education and refernce",
+        "games",
+        "lifestyle and hobbies",
+        "music",
+        "networking and servers",
+        "operation systems",
+        "photography",
+        "programming and web development",
+        "tax prepretation",
+        "utilities",
+        "video"
+      ]
+    },
+    {
+      "category": "sports and outdoor",
+      "subcategories": [
+        "sports and outdoors",
+        "outdoor recreation",
+        "sports and fitness",
+        "fan shop"
+      ]
+    },
+    {
+      "category": "tools and home improvement",
+      "subcategories": [
+        "tools and home improvment",
+        "appliances",
+        "building supplies",
+        "electrical",
+        "hardware",
+        "kitchen and bath fixtures",
+        "light bulbs",
+        "lightning and cieling fans",
+        "measuring and layout tools",
+        "painting supplies and wall treatments",
+        "power and handtools",
+        "rough plumbing",
+        "safety and secuirity",
+        "storage and home organization",
+        "welding and soldering"
+      ]
+    },
+    {
+      "category": "toys and games",
+      "subcategories": [
+        "action figures and statues",
+        "arts and crafts",
+        "baby and toddler toys",
+        "building toys",
+        "dolls and accessories",
+        "dress up and pretend play",
+        "kids electronics",
+        "learning and education",
+        "novelty and gag toys",
+        "party supllies",
+        "puppets",
+        "puzzles",
+        "sports and outdoor play",
+        "stuffed animals and plush toys",
+        "toy remote control and play vehicles",
+        "tricycles scooters and wagons",
+        "video games"
+      ]
+    },
+    {
+      "category": "video games",
+      "subcategories": [
+        "video games",
+        "playstation 4",
+        "playstation 3",
+        "xbox one",
+        "xbox 360",
+        "nintendo switch",
+        "wii U",
+        "wii",
+        "pc",
+        "mac",
+        "nintendo 3ds and 2ds",
+        "nintendo ds",
+        "playstation vita",
+        "sony psp",
+        "retro gaming and microconsoles",
+        "accessories",
+        "digital games",
+        "kids and family"
+      ]
+    },
+    {
+      "category": "womens fashion",
+      "subcategories": [
+        "clothing",
+        "shoes",
+        "jewelry",
+        "watches",
+        "handbags",
+        "accessories",
+        "mens fashion",
+        "girls fashion",
+        "boys fashion"
+      ]
+    }
+  ]
+}

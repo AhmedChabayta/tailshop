@@ -1,86 +1,91 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import { Box, Card, Flex, Section, Typography } from '@src/components';
+import Deals from 'components/DealsOffers/Deals';
+import Hero from 'components/Hero/Hero';
+import Layout from 'components/Layout/Layout';
+import Row from 'components/Row/Row';
+import { mainHomeImage } from '../src/assets/products/home_and_decor';
+import { mainElectronics } from '../src/assets/products/consumer_electronics';
+import RequestForm from 'components/RequestForm/RequestForm';
+import React from 'react';
+import Recommended from 'components/RecommendedSection/Recommended';
+import { services } from '../src/assets/services';
+import { CardDataInterface } from '@src/store/dataStoreTypes';
+import uuid from 'react-uuid';
 
-const Home: NextPage = () => {
+type DataProps = {
+  data: CardDataInterface[];
+};
+
+const Home = ({ data }: DataProps) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <Flex className="w-full flex-col items-center justify-center">
+        <Section className="mx-auto w-full">
+          <Hero />
+          <Deals data={data} />
+        </Section>
+        <Section className="mx-auto">
+          <Flex className="flex-col space-y-4">
+            <Row
+              className="w-full overflow-hidden rounded-md bg-white"
+              list={data}
+              main={mainHomeImage}   
+            />
+            <Row
+              className="w-full overflow-hidden rounded-md bg-white"
+              list={data}
+              main={mainElectronics}
+            />
+          </Flex>
+        </Section>
+        <RequestForm />
+        <Section>
+          <Recommended cardData={data} />
+        </Section>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+        <Section>
+          <Flex className="space-x-6 overflow-x-scroll px-2">
+            {services.map((service) => (
+              <Card
+                className="relative min-h-[200px] w-full min-w-[280px] rounded-md bg-white"
+                key={uuid()}
+              >
+                <Box className="relative">
+                  <Card.Image
+                    className="w-full"
+                    height={120}
+                    width={280}
+                    src={service.image}
+                  />
+                  <Box className="absolute inset-0 bg-black/50" />
+                </Box>
+                <Card.Details className="text-gray-900">
+                  <service.Icon className="absolute right-3 top-1/2 w-[55px] min-w-[55px] translate-y-[-20%] rounded-full border border-white bg-sky-100 p-4" />
+                  <Typography className="max-w-[175px] self-center p-2 capitalize ">
+                    {service.title}
+                  </Typography>
+                </Card.Details>
+              </Card>
+            ))}
+          </Flex>
+        </Section>
+        <Section className="min-h-screen">
+          <Typography>Supplies by region</Typography>
+        </Section>
+      </Flex>
+    </Layout>
+  );
+};
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
+export const getStaticProps = async () => {
+  try {
+    const res = await fetch('https://fakestoreapi.com/products?limit=10');
+    const data = await res.json();
+    return {
+      props: {
+        data,
+      },
+    };
+  } catch (error) {}
+};

@@ -1,8 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
+import { RecoilRoot } from 'recoil';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider attribute="class">
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
