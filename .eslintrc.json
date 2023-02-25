@@ -19,8 +19,5 @@
       "tags": [],
       "classRegex": "^(label|chevron|content|labelContainer|chevronContainer|chevron|optionsContainer|icon|options|input|actionsContainer)ClassName|className$"
     }
-  },
-  "rules": {
-    "react-hooks/exhaustive-deps": "warn"
   }
 }

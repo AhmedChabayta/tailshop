@@ -1,4 +1,5 @@
-import { GeneralInterface } from "../General.Types";
+import { GeneralProps } from "@src/GeneralTypes/General.Types";
+
 export type Elements =
   | HTMLParagraphElement
   | HTMLHeadingElement
@@ -10,7 +11,7 @@ export type Elements =
   | HTMLLabelElement;
 
 export interface TypographyProps
-  extends GeneralInterface,
+  extends GeneralProps,
     Omit<React.HTMLAttributes<Elements>, "className"> {
   as?:
     | "p"

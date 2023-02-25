@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: 'products',
   title: 'Products',
@@ -30,14 +32,14 @@ export default {
       type: 'number',
       title: 'Price',
       description: 'The price of the product in USD.',
-      validation: (Rule) => Rule.required().min(0),
+      validation: (Rule:Rule) => Rule.required().min(0),
     },
     {
       name: 'image',
       type: 'image',
       title: 'Image',
       description: 'The main image of the product.',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule:Rule) => Rule.required(),
     },
     {
       name: 'category',

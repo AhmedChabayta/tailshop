@@ -9,7 +9,6 @@ export {
   Grid,
   Input,
   List,
-  Search,
   Tooltip,
   Typography,
   Card,

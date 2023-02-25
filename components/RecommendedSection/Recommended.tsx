@@ -1,5 +1,6 @@
 import { Card, Grid, Typography } from '@src/components';
-import { CardDataInterface } from 'pages';
+import { CardDataInterface } from '@src/store/dataStoreTypes';
+
 
 interface cardDataProps {
   cardData?: CardDataInterface[];

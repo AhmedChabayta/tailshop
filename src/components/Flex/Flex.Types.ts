@@ -1,8 +1,9 @@
 import { VariantProps } from "class-variance-authority";
-import { GeneralInterface } from "../General.Types";
+
 import { flex } from "./Flex.styles";
+import { GeneralProps } from "@src/GeneralTypes/General.Types";
 
 export interface FlexProps
-  extends GeneralInterface,
+  extends GeneralProps,
     React.ButtonHTMLAttributes<HTMLDivElement>,
     VariantProps<typeof flex> {}
