@@ -14,16 +14,14 @@ const CardImage = ({
   className?: string;
   width: `${number}` | number;
   height: `${number}` | number;
-}) => {
-  return (
-    <Image
-      className={className}
-      width={width}
-      height={height}
-      fill={fill}
-      src={src}
-      alt={`${alt}`}
-    />
-  );
-};
+}) => (
+  <Image
+    className={className}
+    width={width}
+    height={height}
+    fill={fill}
+    src={src}
+    alt={`${alt}`}
+  />
+);
 export default CardImage;

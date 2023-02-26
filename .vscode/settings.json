@@ -3,5 +3,6 @@
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "prettier.configPath": "'/Users/ahmed/Desktop/tw-app-22-feb-2023/.prettierrc'"
 }

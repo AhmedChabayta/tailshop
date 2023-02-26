@@ -8,7 +8,7 @@ import {
   tablet,
   main,
   headphones,
-} from './';
+} from '.';
 
 export const mainElectronics = {
   image: main,

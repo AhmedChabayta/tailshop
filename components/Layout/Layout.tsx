@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import { LayoutProps } from './Layout.Types';
-import Sidebar from '../Sidebar/Sidebar';
-import Header from '../Header/Header';
 import { Box } from '@src/components';
+import { Header, Sidebar } from 'components/Landing';
+import { LayoutProps } from './Layout.Types';
 
 const Layout = (props: LayoutProps) => {
   const { children, title } = props;

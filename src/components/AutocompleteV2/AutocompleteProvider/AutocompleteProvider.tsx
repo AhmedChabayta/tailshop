@@ -9,15 +9,14 @@ type AutocompleteContextValue = {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleItemSelect: (item: string) => void;
   filteredItems: string[] | undefined;
-  options?: any[] | {};
+  options?: any[];
 };
 
 export const AutocompleteContext =
   React.createContext<AutocompleteContextValue>({} as AutocompleteContextValue);
 
-export const useAutocompleteActions = () => {
-  return React.useContext<AutocompleteContextValue>(AutocompleteContext);
-};
+export const useAutocompleteActions = () =>
+  React.useContext<AutocompleteContextValue>(AutocompleteContext);
 
 export type AutocompleteProviderProps = {
   options: string[];
@@ -34,6 +33,7 @@ const AutocompleteProvider: React.FC<AutocompleteProviderProps> = ({
   const [inputValue, setInputValue] = React.useState('');
   const [showOptions, setShowOptions] = React.useState(false);
 
+  // eslint-disable-next-line consistent-return
   const filteredItems = React.useMemo(() => {
     try {
       const OPTIONS = options?.filter(
@@ -42,7 +42,9 @@ const AutocompleteProvider: React.FC<AutocompleteProviderProps> = ({
           item.toLowerCase().includes(inputValue.toLowerCase())
       );
       return OPTIONS;
-    } catch (error) {}
+    } catch (error: unknown) {
+      console.error(error);
+    }
   }, [options, inputValue]);
 
   const clickOutsideRef = useClickOutside(() => setShowOptions(false));
@@ -65,16 +67,28 @@ const AutocompleteProvider: React.FC<AutocompleteProviderProps> = ({
     [onItemSelect]
   );
 
-  const contextValue: AutocompleteContextValue = {
-    inputValue,
-    setInputValue,
-    showOptions,
-    setShowOptions,
-    handleInputChange,
-    handleItemSelect,
-    filteredItems,
-    options,
-  };
+  const contextValue = React.useMemo(
+    () => ({
+      inputValue,
+      setInputValue,
+      showOptions,
+      setShowOptions,
+      handleInputChange,
+      handleItemSelect,
+      filteredItems,
+      options,
+    }),
+    [
+      inputValue,
+      setInputValue,
+      showOptions,
+      setShowOptions,
+      handleInputChange,
+      handleItemSelect,
+      filteredItems,
+      options,
+    ]
+  );
 
   return (
     <AutocompleteContext.Provider value={contextValue}>

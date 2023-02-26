@@ -3,12 +3,12 @@ import {
   ClipboardIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
+import classNames from 'classnames';
 import Button from '../../Button/Button';
 import Flex from '../../Flex/Flex';
 import { useAutocompleteActions } from '../AutocompleteProvider/AutocompleteProvider';
 import { useCopyToClipboard } from '../../../hooks';
-import { motion } from 'framer-motion';
-import classNames from 'classnames';
 
 interface AutocompleteActionsInterface {
   className?: string;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Code } from '../../../src/components';
 import classnames from 'classnames';
+import { Code } from '..';
 import { Elements, TypographyProps } from './Typography.Types';
 
 const Typography = React.forwardRef<

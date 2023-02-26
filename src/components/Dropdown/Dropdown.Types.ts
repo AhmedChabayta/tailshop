@@ -1,1 +1,3 @@
-export interface DropdownInterface {}
+export interface DropdownInterface {
+  foo?: string;
+}

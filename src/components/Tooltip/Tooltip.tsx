@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { motion, MotionStyle, useMotionValue } from "framer-motion";
-import { Box, Typography } from "../../../src/components";
+import { useState } from 'react';
+import { motion, MotionStyle, useMotionValue } from 'framer-motion';
+import { Box, Typography } from '..';
 
 interface TooltipProps {
   text?: string;
@@ -23,7 +23,7 @@ const Tooltip = ({ text, children }: TooltipProps) => {
   };
 
   const tooltipStyle: MotionStyle = {
-    position: "absolute",
+    position: 'absolute',
     zIndex: 9999,
     left: x,
     top: y,

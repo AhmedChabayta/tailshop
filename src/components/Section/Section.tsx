@@ -1,6 +1,6 @@
 import React from 'react';
-import { SectionPropsInterface } from './Section.Types';
 import classnames from 'classnames';
+import { SectionPropsInterface } from './Section.Types';
 
 const Section = React.forwardRef<HTMLElement, SectionPropsInterface>(
   (props, ref) => {

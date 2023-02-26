@@ -1,0 +1,1 @@
+export { suppliesData } from './regionalSuppliers';

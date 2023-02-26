@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const useClickOutside = (handler: () => void) => {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -10,10 +10,10 @@ const useClickOutside = (handler: () => void) => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [handler]);
 

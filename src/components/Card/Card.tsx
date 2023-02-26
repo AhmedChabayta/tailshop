@@ -8,9 +8,7 @@ const Card = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
-  return <Box className={className}>{children}</Box>;
-};
+}) => <Box className={className}>{children}</Box>;
 export default Card;
 Card.Details = CardDetails;
 Card.Image = CardImage;

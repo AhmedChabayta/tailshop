@@ -1,7 +1,7 @@
-import { GeneralProps } from './../../GeneralTypes/General.Types';
-import { VariantProps } from "class-variance-authority";
+import { VariantProps } from 'class-variance-authority';
+import { GeneralProps } from '../../GeneralTypes/General.Types';
 
-import { button } from "./Button.Styles";
+import { button } from './Button.Styles';
 
 export interface ButtonProps
   extends GeneralProps,

@@ -1,4 +1,4 @@
-import { GeneralProps } from "@src/GeneralTypes/General.Types";
+import { GeneralProps } from '@src/GeneralTypes/General.Types';
 
 export type Elements =
   | HTMLParagraphElement
@@ -12,32 +12,32 @@ export type Elements =
 
 export interface TypographyProps
   extends GeneralProps,
-    Omit<React.HTMLAttributes<Elements>, "className"> {
+    Omit<React.HTMLAttributes<Elements>, 'className'> {
   as?:
-    | "p"
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "a"
-    | "strike"
-    | "sub"
-    | "sup"
-    | "blockquote"
-    | "pre"
-    | "code"
-    | "kbd"
-    | "samp"
-    | "var"
-    | "cite"
-    | "abbr"
-    | "q"
-    | "small"
-    | "big"
-    | "span"
-    | "label";
+    | 'p'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'a'
+    | 'strike'
+    | 'sub'
+    | 'sup'
+    | 'blockquote'
+    | 'pre'
+    | 'code'
+    | 'kbd'
+    | 'samp'
+    | 'var'
+    | 'cite'
+    | 'abbr'
+    | 'q'
+    | 'small'
+    | 'big'
+    | 'span'
+    | 'label';
   className?: string;
   htmlFor?: string;
 }

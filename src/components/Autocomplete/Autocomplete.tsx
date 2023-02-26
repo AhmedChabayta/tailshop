@@ -64,7 +64,7 @@ const Autocomplete: React.FC<AutocompleteProps> = React.forwardRef<
   const inputRef = React.useRef<HTMLInputElement>(null);
   // const wrapperRef = React.useRef<HTMLDivElement>(null);
 
-  const [copyToClipboard, { isCopied, error }] = useCopyToClipboard();
+  const [copyToClipboard] = useCopyToClipboard();
 
   const filteredItems = React.useMemo(() => {
     try {
@@ -74,7 +74,10 @@ const Autocomplete: React.FC<AutocompleteProps> = React.forwardRef<
           item.toLowerCase().includes(inputValue.toLowerCase())
       );
       return OPTIONS;
-    } catch (error) {}
+    } catch (error: unknown) {
+      console.error(error);
+    }
+    return [];
   }, [options, inputValue]);
 
   React.useEffect(() => {
@@ -154,7 +157,6 @@ const Autocomplete: React.FC<AutocompleteProps> = React.forwardRef<
             aria-details="copy input button"
             onClick={() => {
               copyToClipboard(inputValue);
-              alert(`coped ${inputValue}`);
             }}
             className="group m-0 p-0"
           >
@@ -175,24 +177,28 @@ const Autocomplete: React.FC<AutocompleteProps> = React.forwardRef<
           >
             {filteredItems?.length > 0 || inputValue.length
               ? filteredItems?.map((option) => (
-                  <li
-                    typeof="button"
+                  <Button
+                    type="button"
                     key={uuid()}
                     onClick={() => handleItemSelect(option)}
                     className={classnames(Styles.options, optionsClassName)}
                   >
-                    <Typography>{option}</Typography>
-                  </li>
+                    <li>
+                      <Typography>{option}</Typography>
+                    </li>
+                  </Button>
                 ))
               : options?.map((option) => (
-                  <li
-                    typeof="button"
+                  <Button
+                    type="button"
                     key={uuid()}
                     onClick={() => handleItemSelect(option)}
                     className={classnames(Styles.options, optionsClassName)}
                   >
-                    <Typography>{option}</Typography>
-                  </li>
+                    <li>
+                      <Typography>{option}</Typography>
+                    </li>
+                  </Button>
                 ))}
           </ul>
         )}

@@ -1,25 +1,15 @@
 import { create } from 'zustand';
-import { CardDataInterface } from './dataStoreTypes';
-import { useEffect, useMemo } from 'react';
 
 type State = {
-  isLoading: boolean;
-  data: CardDataInterface[];
-  error: Error | null;
-  fetchData: () => Promise<void>;
+  products: Array<any>;
+  setProducts: (data: Array<any>) => void;
+  categories: Array<any>;
+  setCategories: (data: Array<any>) => void;
 };
 
-const useStore = create<State>((set) => ({
-  data: [],
-  isLoading: true,
-  error: null,
-  fetchData: async () => {
-    try {
-      const response = await fetch('https://fakestoreapi.com/products');
-      const data = await response.json();
-      set({ data, isLoading: false });
-    } catch (error: any) {
-      set({ error, isLoading: false });
-    }
-  },
+export const useStore = create<State>((set) => ({
+  products: [],
+  setProducts: (products: Array<any>) => set({ products }),
+  categories: [],
+  setCategories: (categories: Array<any>) => set({ categories }),
 }));

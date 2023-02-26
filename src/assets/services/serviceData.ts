@@ -1,10 +1,10 @@
-import { service1, service2, service3, service4 } from './';
 import {
   MagnifyingGlassIcon,
   ArchiveBoxIcon,
   PaperAirplaneIcon,
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
+import { service1, service2, service3, service4 } from '.';
 
 export const services = [
   {

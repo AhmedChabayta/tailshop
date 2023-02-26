@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import useClickOutside from '@src/hooks/useClickOutside/useClickOutside';
+import { AnimatePresence, motion } from 'framer-motion';
 import Button from '../Button/Button';
 import Typography from '../Typography/Typography';
-import useClickOutside from '@src/hooks/useClickOutside/useClickOutside';
-import Box from '../Box/Box';
-import { AnimatePresence, motion } from 'framer-motion';
-import Flex from '../Flex/Flex';
 
 const Dropdown = ({ items, label }: { items: any[]; label: string }) => {
   const router = useRouter();
@@ -52,7 +50,7 @@ const Dropdown = ({ items, label }: { items: any[]; label: string }) => {
               <Button
                 key={item}
                 type="button"
-                className={`block w-full px-4 text-start text-sm hover:bg-amber-300 dark:hover:bg-blue-600`}
+                className="block w-full px-4 text-start text-sm hover:bg-amber-300 dark:hover:bg-blue-600"
                 onClick={() => handleMenuItemClick(item)}
               >
                 <Typography className="w-full flex-1 whitespace-nowrap p-3 text-xl capitalize">

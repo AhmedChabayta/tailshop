@@ -1,9 +1,0 @@
-node_modules/
-build/
-**/*.stories.*
-.yarn
-.next
-.storybook
-.vscode
-yarn.lock
-.yarnrc.yml

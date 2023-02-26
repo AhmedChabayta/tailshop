@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import Flex from '../Flex/Flex';
-import Box from '../Box/Box';
 
 interface CountdownProps {
   targetDate: Date;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+const Countdown: React.FC<CountdownProps> = ({
+  targetDate,
+}: CountdownProps) => {
   const [remainingTime, setRemainingTime] = useState({
     days: 0,
     hours: 0,

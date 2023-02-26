@@ -9,15 +9,10 @@ const Avatar = ({
   src?: StaticImageData;
   className?: string;
   alt?: string;
-}) => {
-  return (
-    <>
-      {src ? (
-        <Image className={className} src={src} alt="" />
-      ) : (
-        <AvatarIcon className={className} />
-      )}
-    </>
+}) =>
+  src ? (
+    <Image className={className} src={src} alt="" />
+  ) : (
+    <AvatarIcon className={className} />
   );
-};
 export default Avatar;

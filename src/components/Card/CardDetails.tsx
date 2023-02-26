@@ -6,7 +6,5 @@ const CardDetails = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
-  return <Box className={className}>{children}</Box>;
-};
+}) => <Box className={className}>{children}</Box>;
 export default CardDetails;

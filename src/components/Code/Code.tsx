@@ -1,28 +1,33 @@
 import { CodeBracketIcon } from '@heroicons/react/24/solid';
-import Button from '../../../src/components/Button/Button';
 import { motion } from 'framer-motion';
 import React from 'react';
-import type { CodePropsInterface } from './Code.Types';
 import classnames from 'classnames';
-import { useCopyToClipboard } from '../../../src/hooks';
+import type { CodePropsInterface } from './Code.Types';
+import Button from '../Button/Button';
+import { useCopyToClipboard } from '../../hooks';
 
 const Code = React.forwardRef<HTMLElement, CodePropsInterface>((props, ref) => {
   const { className, children, ...rest } = props;
   const [codeText, setCodeText] = React.useState<string | null>('');
   const [toast, setToast] = React.useState<string | null>();
 
-  const [copyToClipboard, { isCopied, error }] = useCopyToClipboard();
+  const [copyToClipboard] = useCopyToClipboard();
 
   const handleCopyClick = () => {
     try {
       setToast(null);
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       copyToClipboard(codeText!);
-      codeText !== '' ? setToast('Copied') : setToast('No content detected');
+      if (codeText !== '') {
+        setToast('Copied');
+      } else {
+        setToast('No content detected');
+      }
       setTimeout(() => {
         setToast(null);
       }, 5000);
-    } catch (error: any) {
-      setToast(error.message);
+    } catch (error: unknown) {
+      setToast('error, something happened');
       setTimeout(() => {
         setToast(null);
       }, 8000);

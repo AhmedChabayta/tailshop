@@ -3,7 +3,7 @@ import { InputInterfaceProps } from '@src/components/Input/Input.Types';
 import React from 'react';
 import { useAutocompleteActions } from '../AutocompleteProvider/AutocompleteProvider';
 
-interface AutocompleteInputInterface extends InputInterfaceProps {}
+type AutocompleteInputInterface = InputInterfaceProps;
 
 const AutocompleteInput = (props: AutocompleteInputInterface) => {
   const { inputValue, handleInputChange } = useAutocompleteActions();

@@ -1,0 +1,10 @@
+export { Deals } from './DealsOffers';
+export { About, Subscribe } from './Footer';
+export { Header } from './Header';
+export { Hero } from './Hero';
+export { Recommended } from './RecommendedSection';
+export { RequestForm } from './RequestForm';
+export { Row } from './Row';
+export { Services } from './Services';
+export { Sidebar } from './Sidebar';
+export { Suppliers } from './Suppliers';
